@@ -3,6 +3,8 @@ module.exports = {
   root: true,
   extends: [
     'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     'plugin:prettier/recommended',
     'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
     'plugin:@typescript-eslint/eslint-recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
@@ -65,5 +67,7 @@ module.exports = {
         },
       },
     ],
+    'import/no-default-export': 'error',
+    'import/no-unresolved': 'error',
   },
 };
